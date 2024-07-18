@@ -1,0 +1,28 @@
+private void button3_Click(object sender, EventArgs e)
+{
+    string h = textBox3.Text;
+    string w = textBox4.Text;
+
+    double height = double.Parse(h)/100; # we assume users type cm in the textbox.
+    double weight = double.Parse(w);
+
+    // Calculate the BMI
+    double bmi = weight / (height * height);
+
+    // Display the BMI result in the label
+    label3.Text = "Your BMI is: " + bmi.ToString("0.00");
+
+    if (bmi < 18.5)
+    {
+        label8.Text = "too light";
+    }
+    else if (bmi <24)
+    {
+        label8.Text = "normal";
+    }
+    else
+    {
+        label8.Text = "too fat";
+    }
+
+}
