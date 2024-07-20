@@ -1,0 +1,25 @@
+ private void button5_Click(object sender, EventArgs e)
+ {
+     int punkt = int.Parse(textBox6.Text);
+
+     if (punkt >= 90)
+     {
+         label5.Text = "A+ 甲等";
+     }
+     else if (punkt >= 80 && punkt <= 89)
+     {
+         label5.Text = "A 乙等";
+     }
+     else if (punkt >= 70 && punkt <= 79)
+     {
+         label5.Text = "B 丙等";
+     }
+     else if (punkt >= 60 && punkt <= 69)
+     {
+         label5.Text = "C 丁等";
+     }
+     else
+     {
+         label5.Text = "D 戊等";
+     }
+ }
