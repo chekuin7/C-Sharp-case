@@ -1,0 +1,31 @@
+ private void button7_Click(object sender, EventArgs e)
+ {
+     string a = "Mom says:\"Kein Problem, Bitte bezahlen Sie jetzt\"     ";
+     string b = @"C:\AA\BB\CC\DD\ee.jpg    ";
+     string c = "巨匠電腦\r\n桃園認證中心\t桃園分部";
+
+     string result = "";
+     result += c.Length + "\r\n";
+     result += c + "\r\n";
+     result += c.Substring(4) + "\r\n"; # only print out the remaining characters after the 4th ordinal content.
+     result += c.Substring(6, 2) + "\r\n"; # print out the remaining characters after the 6th ordinal content and subtract two characters only.
+     result += a + "\r\n";
+     result += b + "\r\n";
+
+     textBox8.Text = result; 
+ }
+
+In C#, the @ symbol has two main uses:
+Verbatim String Literal:
+
+When placed in front of a string, the @ symbol tells the compiler to interpret the string as a verbatim string literal. This means that escape sequences (like backslashes \) are treated as ordinary characters rather than escape sequences.
+This is particularly useful for file paths, regular expressions, and other strings that contain many backslashes, as it removes the need to escape them with double backslashes \\.
+Example:
+csharp
+Code kopieren
+string path = @"C:\AA\BB\CC\DD\ee.jpg";
+// Equivalent to
+string path = "C:\\AA\\BB\\CC\\DD\\ee.jpg";
+
+\t means Tab 
+\r\n means Enter(換行), and then the printout contents will have one more line space.
