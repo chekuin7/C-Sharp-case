@@ -1,0 +1,16 @@
+private void button8_Click(object sender, EventArgs e)
+{
+    int choice = int.Parse(textBox9.Text);
+    string a = "";
+    switch (choice)
+    {
+        case 1: a = "Adult Tieckt: 10 USD"; break;
+        case 2: a = "Student Ticket: 8 USD"; break;
+        case 5:
+        case 3: a = "6 USD"; break;
+        case 4: a = "Physically Challenged Ticket:5 USD"; break;
+        default: a = "only 1 ~ 5 to choose from"; break;
+
+    }
+    label10.Text = a;
+}
