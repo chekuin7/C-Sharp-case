@@ -1,0 +1,27 @@
+private void button1_Click(object sender, EventArgs e)
+{
+    int num = int.Parse(textBox5.Text);
+
+    if (num >= 1000)
+    {
+        label4.Text = "4-digit or more";
+    }
+    else if(num >= 100 && num <= 999)
+    {
+        label4.Text = "3-digit or more";
+    }
+    else if (num >= 10 && num <= 99)
+    {
+        label4.Text = "2-digit or more";
+    }
+    else if (num >= 1 && num <= 9)
+    {
+        label4.Text = "1-digit or more";
+    }
+    else if (num <0)
+    {
+        label4.Text = "negative number";
+    }
+}
+
+#(num >= 100 && num <= 999) the determination factor can be shortend into (num >= 100) only
